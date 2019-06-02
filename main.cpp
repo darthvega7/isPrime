@@ -13,21 +13,22 @@ int checkPrime(int number) {
         }
     }
     if(isDiv) {
-        cout << "Number is NOT prime. Divisble by " << divNumber;
+        cout << "Number is NOT prime. Divisble by " << divNumber << endl;
     } else {
-        cout << "Number IS Prime";
+        cout << "Number IS Prime" << endl;
     }
 }
 
 int main()
 {
     int num;
-    cout << "Enter a number: ";
-    cin >> num;
-    while(num != 0) {
-        checkPrime(num);
-        cout << endl << "Enter a number: ";
+    while(true) {
+        cout << "Enter a number: ";
         cin >> num;
+        if(num < 2) {
+            break;
+        }
+        checkPrime(num);
     }
     return 0;
 }
